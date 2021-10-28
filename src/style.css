@@ -1,0 +1,50 @@
+.field {
+  background-color: rgb(231, 231, 231);
+  width: 620px;
+  height: 620px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.field > div {
+  min-width: 200px;
+  min-height: 200px;
+  background-color: rgb(173, 173, 173);
+  transition: all 0.3s;
+  font-size: 120px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.field > div:hover {
+  cursor: pointer;
+  background-color: rgb(231, 231, 231);
+}
+
+.control-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.game {
+  width: fit-content;
+  margin-top: 30px;
+}
+
+.active {
+  outline: 3px solid rgba(0, 0, 255, 0.459) !important;
+}
+
+.value {
+  background-color: rgb(231, 231, 231) !important;
+  pointer-events: none !important;
+}
+
+.end-game {
+  pointer-events: none !important;
+}

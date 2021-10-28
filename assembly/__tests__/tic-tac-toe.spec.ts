@@ -1,9 +1,9 @@
-import { addMessage, getMessages } from '../main';
-import { PostedMessage, messages } from '../model';
+import { addStep, newGame, showAllSteps, checkWinner } from '../main';
+import { PlayerStep, steps } from '../model';
 import { VMContext, Context, u128 } from 'near-sdk-as';
 
-function createMessage(text: string): PostedMessage {
-  return new PostedMessage(text);
+function createMessage(text: string): PlayerStep {
+  return new PlayerStep(text);
 }
 
 const message = createMessage('hello world');
@@ -51,7 +51,7 @@ describe('message tests', () => {
 
   it('only show the last 10 messages', () => {
     addMessage('hello world');
-    const newMessages: PostedMessage[] = [];
+    const newMessages: PlayerStep[] = [];
     for(let i: i32 = 0; i < 10; i++) {
       const text = 'message #' + i.toString();
       newMessages.push(createMessage(text));

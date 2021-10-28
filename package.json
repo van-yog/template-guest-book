@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "license": "(MIT AND Apache-2.0)",
   "scripts": {
+    "dep": "yarn build:contract:debug && near dev-deploy",
     "build": "yarn build:contract && yarn build:web",
     "build:contract": "asb",
     "build:contract:debug": "asb --target debug",
@@ -43,7 +44,7 @@
     "regenerator-runtime": "^0.13.7"
   },
   "resolutions": {
-     "@babel/preset-env": "7.13.8"
+    "@babel/preset-env": "7.13.8"
   },
   "jest": {
     "projects": [
